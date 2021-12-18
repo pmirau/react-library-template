@@ -1,0 +1,19 @@
+{
+  "name": "@pmirau/test-react-package",
+  "version": "1.0.0",
+  "description": "Test how to manage and publish react packages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmirau/test-react-package.git"
+  },
+  "author": "Philip Mirau",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/pmirau/test-react-package/issues"
+  },
+  "homepage": "https://github.com/pmirau/test-react-package#readme"
+}
