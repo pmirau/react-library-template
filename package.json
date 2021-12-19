@@ -4,6 +4,8 @@
   "description": "Test how to manage and publish react packages",
   "main": "index.js",
   "scripts": {
+    "start": "webpack serve --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/pmirau/test-react-package/issues"
   },
-  "homepage": "https://github.com/pmirau/test-react-package#readme"
+  "homepage": "https://github.com/pmirau/test-react-package#readme",
+  "devDependencies": {
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.6.0",
+    "webpack-merge": "^5.8.0"
+  }
 }
