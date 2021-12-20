@@ -2,7 +2,10 @@
   "name": "@pmirau/test-react-package",
   "version": "1.0.0",
   "description": "Test how to manage and publish react packages",
-  "main": "index.js",
+  "main": "dist/main.js",
+  "files": [
+    "/dist"
+  ],
   "scripts": {
     "start": "webpack serve --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
