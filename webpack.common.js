@@ -1,4 +1,5 @@
 const path = require('path');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: './src/index.js',
@@ -10,6 +11,7 @@ module.exports = {
     },
     globalObject: 'this',
   },
+  plugins: [new MiniCssExtractPlugin()],
   module: {
     rules: [
       {
@@ -17,12 +19,15 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         resolve: {
-          extensions: ['.js', '.jsx',],
+          extensions: ['.js', '.jsx'],
         },
       },
       {
         test: /\.s?css$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        // See https://github.com/vercel/next.js/discussions/14060#discussioncomment-27889
+        // for the reason to not use style-loader.
+        // Consider using https://github.com/kriasoft/isomorphic-style-loader
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       }
 
     ],
