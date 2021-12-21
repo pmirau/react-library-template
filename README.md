@@ -34,3 +34,10 @@ for more info.
 `<type>--<description>`
 
 Start the description with a verb if possible.
+
+## Notes
+
+### `react` as dev-& peer-dependency
+
+Also add `react` as a dev-dependency alongside the peer-dependency in the library. 
+Because otherwise NextJS throws the error `Module not found: Can't resolve 'react'`
