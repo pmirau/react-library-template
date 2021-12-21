@@ -7,10 +7,10 @@
     "/dist"
   ],
   "scripts": {
-    "start": "webpack serve --open --config webpack.dev.js",
-    "watch": "webpack --watch --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
-    "test": "jest"
+    "dev": "yarn dev:test",
+    "dev:test": "jest --watchAll",
+    "dev:live": "webpack --watch --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
