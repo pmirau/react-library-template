@@ -1,5 +1,5 @@
 {
-  "name": "@pmirau/test-react-package",
+  "name": "@pmirau/react-library-template",
   "version": "1.0.0",
   "description": "Test how to manage and publish react packages",
   "main": "dist/main.js",
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pmirau/test-react-package.git"
+    "url": "git+https://github.com/pmirau/react-library-template.git"
   },
   "author": "Philip Mirau",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/pmirau/test-react-package/issues"
+    "url": "https://github.com/pmirau/react-library-template/issues"
   },
-  "homepage": "https://github.com/pmirau/test-react-package#readme",
+  "homepage": "https://github.com/pmirau/react-library-template#readme",
   "devDependencies": {
     "@babel/core": "^7.16.5",
     "@babel/preset-env": "^7.16.5",
