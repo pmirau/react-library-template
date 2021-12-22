@@ -32,6 +32,41 @@ To sum up, there should be two possible entrypoints for the library consumer:
 
 ## Usage
 
+### Library boilerplate (this package)
+
+#### Initialize
+
+Before managing npm-packages on the `npm.pkg.github.com`-registry on a machine,
+[authenticate](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-to-github-packages)
+to GitHub Packages first.
+
+1. Clone this repository
+2. Delete `.git` to remove git dependencies
+3. Rename `README.md` to `README_BUILD.md` (To use `README.md` for the library)
+4. Update `package.json` fields
+5. Init a new repository (TODO: Document steps)
+   1. Create a new, empty repository on GitHub
+   2. Follow the "Quick setup" steps
+      1. `git init`
+      2. `git add .`
+      3. `git commit -m "build: init repository"`
+      4. `git remote add origin <repository-url>`
+      5. `git push -u origin master`
+      
+#### Publish package
+
+Use the [Publishing a package using publishConfig in the package.json file](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#publishing-a-package-using-publishconfig-in-the-packagejson-file)
+guide.
+
+#### Update package
+
+To update, use '[npm version](https://docs.npmjs.com/cli/v8/commands/npm-version)'.
+
+#### Install package in consumer
+
+Use the [Installing a package](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#installing-a-package)
+guide.
+
 ### Development
 
 Use _Behavior Driven Development_ during development (`yarn dev`)
@@ -59,6 +94,11 @@ _Not implemented!_
 Also consider to spin up a custom React server via webpack-dev-server.
 See [this tutorial](https://medium.com/@JedaiSaboteur/creating-a-react-app-from-scratch-f3c693b84658)
 for more info.
+
+#### Alternatives
+- CRA
+- Storybook
+- React Styleguidist (+ Emotion)
 
 ## Git
 
