@@ -10,6 +10,7 @@ It uses the following technologies
 - Jest for testing
 - NextJS as React host framework
 - `mini-css-extract-plugin` as 'css bundler'
+- Support for Typescript (webpack config defaults to typescript)
 
 ## Structure
 
@@ -17,17 +18,17 @@ It uses the following technologies
 |-- host/    <- provides a react server for live-testing the library
 |-- src/     <- recommended libary structure
     |-- __example__/    -> provide example components, which can be used during development
-        |-- index.js    -> always use index.js files as interfaces for the library consumer
+        |-- index.ts    -> always use index.ts files as interfaces for the library consumer
     |-- __tests__/
     |-- .../
-    |-- index.js        -> library interface
+    |-- index.ts        -> library interface
 |-- dist/
 |-- ...    
 ```
 
 To sum up, there should be two possible entrypoints for the library consumer:
-1. All modules used in production should only be accessible via `src/index.js`
-2. In some cases example-components for showcasing can be accessible via `src/__example__/index.js`  
+1. All modules used in production should only be accessible via `src/index.ts`
+2. In some cases example-components for showcasing can be accessible via `src/__example__/index.ts`  
    (Though they are initially intended for usage during library development/showcasing)
 
 ## Usage
@@ -85,7 +86,7 @@ To live test the library, you can use following options:
 Or symlink src/ into the example-framework to retain the initial NextJS compilation speed:  
 `ln -s <src>/ <symlinked-folder-name>`  
 But remember to design the library interface abstract, so that nothing changes for the imports
-but the import-path (by exporting all components etc. via `src/index.js`)
+but the import-path (by exporting all components etc. via `src/index.ts`)
 
 #### Self-host
 

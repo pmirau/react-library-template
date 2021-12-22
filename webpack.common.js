@@ -2,7 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.ts',
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
@@ -10,6 +10,7 @@ module.exports = {
       type: 'umd',
     },
     globalObject: 'this',
+    clean: true,
   },
   plugins: [new MiniCssExtractPlugin()],
   module: {
@@ -20,6 +21,14 @@ module.exports = {
         loader: 'babel-loader',
         resolve: {
           extensions: ['.js', '.jsx'],
+        },
+      },
+      {
+        test: /\.tsx?$/i,
+        exclude: /node_modules/,
+        use: ['babel-loader', 'ts-loader'],
+        resolve: {
+          extensions: ['.ts', '.tsx'],
         },
       },
       {
