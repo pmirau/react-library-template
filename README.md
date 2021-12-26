@@ -91,6 +91,13 @@ To live test the library, you can use following options:
 1. Execute `yarn link` in the root directory
 2. Execute the provided command (`yarn link <package>`) in `host/`
 
+Alternative:
+
+1. Run `yarn add link:/path/to/local/folder` in `host/`
+
+To enable autocompletion, mark the library in `host/node_modules` as `Cancel exclusion`
+(see https://youtrack.jetbrains.com/issue/WEB-16713#focus=streamItem-27-3055019-0-0)
+
 #### Symlink
 
 Or symlink src/ into the example-framework to retain the initial NextJS compilation speed:  
