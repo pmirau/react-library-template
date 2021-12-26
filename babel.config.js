@@ -9,6 +9,7 @@ if (process.env.NODE_ENV === 'test') {
 }
 
 if (process.env.NODE_ENV === 'production') {
+  plugins.push('babel-plugin-typescript-to-proptypes');
   presets.push('@babel/preset-typescript');
 }
 
