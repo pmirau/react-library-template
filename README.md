@@ -68,6 +68,16 @@ To update, use '[npm version](https://docs.npmjs.com/cli/v8/commands/npm-version
 Use the [Installing a package](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#installing-a-package)
 guide.
 
+#### package.json scripts
+
+- `dev:test`: develop library in BDD
+- `dev:live`: start library to live-develop via consumption in host via `yarn link`
+- `test:jest`: run a jest test
+- `test:ts`: run tsc without emitting, to type-check the code
+- `build:js`: compile ts to js without declaration files
+- `build:tsd`: transpile ts declarations only
+- `build`: build library
+
 ### Development
 
 Use _Behavior Driven Development_ during development (`yarn dev`)

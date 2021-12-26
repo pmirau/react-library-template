@@ -16,22 +16,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/i,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-        resolve: {
-          extensions: ['.js', '.jsx'],
-        },
-      },
-      {
-        test: /\.tsx?$/i,
-        exclude: /node_modules/,
-        use: ['babel-loader', 'ts-loader'],
-        resolve: {
-          extensions: ['.ts', '.tsx'],
-        },
-      },
-      {
         test: /\.s?css$/i,
         // See https://github.com/vercel/next.js/discussions/14060#discussioncomment-27889
         // for the reason to not use style-loader.

@@ -6,4 +6,24 @@ module.exports = merge(common, {
   devServer: {
     static: './dist',
   },
+  module: {
+    rules: [
+      {
+        test: /\.jsx?$/i,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        resolve: {
+          extensions: ['.js', '.jsx'],
+        },
+      },
+      {
+        test: /\.tsx?$/i,
+        exclude: /node_modules/,
+        use: ['babel-loader', 'ts-loader'],
+        resolve: {
+          extensions: ['.ts', '.tsx'],
+        },
+      },
+    ],
+  }
 });
