@@ -1,11 +1,15 @@
 {
   "include": ["src/**/*"],
+  "exclude": ["src/__tests__"],
   "compilerOptions": {
     "allowJs": true,
     "outDir": "dist",
     "declaration": true,
     "declarationMap": true,
     "target": "ES6",
-    "moduleResolution": "Node"
+    "strict": true,
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
   }
 }
