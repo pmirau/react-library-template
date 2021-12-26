@@ -59,6 +59,10 @@ to GitHub Packages first.
 Use the [Publishing a package using publishConfig in the package.json file](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#publishing-a-package-using-publishconfig-in-the-packagejson-file)
 guide.
 
+Hint: Use `files` in `package.json` to define the files, which should be published.
+
+Hint: use `npm pack` or `npm publish --dry-run` to test the output.
+
 #### Update package
 
 To update, use '[npm version](https://docs.npmjs.com/cli/v8/commands/npm-version)'.

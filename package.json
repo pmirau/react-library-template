@@ -4,7 +4,9 @@
   "description": "Test how to manage and publish react packages",
   "main": "dist/main.js",
   "files": [
-    "/dist"
+    "/dist/main.js",
+    "/dist/**/*.d.ts",
+    "/dist/**/*.map"
   ],
   "types": "dist/index.d.ts",
   "scripts": {
