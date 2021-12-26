@@ -1,6 +1,5 @@
 {
-  "include": ["src/**/*", "declaration.d.ts"],
-  "exclude": ["src/__tests__"],
+  "include": ["src/**/*", "src/**/*.json", "declaration.d.ts"],
   "compilerOptions": {
     "allowJs": true,
     "outDir": "dist",

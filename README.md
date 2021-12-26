@@ -15,13 +15,13 @@ It uses the following technologies
 ## Structure
 
 ```
-|-- host/    <- provides a react server for live-testing the library
-|-- src/     <- recommended libary structure
-    |-- __example__/    -> provide example components, which can be used during development
-        |-- index.ts    -> always use index.ts files as interfaces for the library consumer
-    |-- __tests__/
+|-- host/               <- provides a react server for live-testing the library
+|-- __tests__/
+|-- src/                <- recommended libary structure
+    |-- __example__/    <- provide example components, which can be used during development
+        |-- index.ts    <- always use index.ts files as interfaces for the library consumer
     |-- .../
-    |-- index.ts        -> library interface
+    |-- index.ts        <- library interface
 |-- dist/
 |-- ...    
 ```

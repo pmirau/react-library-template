@@ -19,6 +19,7 @@ module.exports = merge(common, {
       {
         test: /\.tsx?$/i,
         exclude: /node_modules/,
+        // consider options.projectReferences for ts-loader
         use: ['babel-loader', 'ts-loader'],
         resolve: {
           extensions: ['.ts', '.tsx'],
