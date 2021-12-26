@@ -11,7 +11,8 @@
     "dev": "yarn dev:test",
     "dev:test": "jest --watchAll",
     "dev:live": "webpack --watch --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "test": "tsc --noEmit && jest"
   },
   "repository": {
     "type": "git",
