@@ -18,6 +18,18 @@
     "build:tsd": "NODE_ENV=production tsc -p src/tsconfig.prod.json",
     "build": "yarn test:jest && yarn build:js && yarn build:tsd"
   },
+  "jest": {
+    "testMatch": [
+      "**/?(*.)+(spec|test).[jt]s?(x)"
+    ],
+    "testEnvironment": "jsdom",
+    "moduleNameMapper": {
+      "\\.(css|scss|less)$": "identity-obj-proxy"
+    },
+    "setupFilesAfterEnv": [
+      "./jest.setup.js"
+    ]
+  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
@@ -36,6 +48,10 @@
     "@babel/preset-env": "^7.16.5",
     "@babel/preset-react": "^7.16.5",
     "@babel/preset-typescript": "^7.16.5",
+    "@testing-library/dom": "^8.11.3",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.4",
+    "@testing-library/react-hooks": "^7.0.2",
     "@types/jest": "^27.0.3",
     "@types/node": "^17.0.5",
     "@types/react": "^17.0.38",
@@ -52,9 +68,12 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^27.4.5",
     "mini-css-extract-plugin": "^2.4.5",
     "react": "^17.0.2",
+    "react-test-renderer": "^16.9.0",
+    "react-dom": "^17.0.2",
     "sass": "^1.45.0",
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",
@@ -67,6 +86,7 @@
   },
   "peerDependencies": {
     "prop-types": "^15.8.0",
-    "react": "^17.0.2"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
