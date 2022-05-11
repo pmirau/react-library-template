@@ -21,7 +21,15 @@
         "unnamedComponents": "arrow-function"
       }
     ],
-    "@typescript-eslint/semi": "off"
+    "@typescript-eslint/semi": "off",
+    "object-curly-newline": [
+      "error",
+      {
+        "ImportDeclaration": {
+          "multiline": true
+        }
+      }
+    ]
   },
   "env": {
     "jest": true
