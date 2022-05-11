@@ -14,6 +14,8 @@ It uses the following technologies
 
 ## Structure
 
+See package `lib--configurator-form` for reference.
+
 ```
 |-- host/               <- provides a react server for live-testing the library
 |-- __tests__/
@@ -47,14 +49,27 @@ to GitHub Packages first.
 4. Update `package.json` fields
    - Don't forget to set version to `0.1.0` (see (semver)[https://semver.org/#how-should-i-deal-with-revisions-in-the-0yz-initial-development-phase])
      for reasons)
+   - change `publishConfig.registry` to `https://npm-my-precious.philipmirau.de` when needed
+   - Remove all git related fields when hosting on own git server
 5. Init a new repository (TODO: Document steps)
+  - Self Host
+    - Server
+      1. SSH into git server
+      2. `git init --bare ~/<projectname>.git`
+    - Local Machine
+      1. `git init`
+      2. `git add .`
+      3. `git commit -m "build: init repository"`
+      4. `git remote add origin git@<git_server_domain>:<projectname>.git`
+      5. `git push -u origin master`
+  - GitHub
     1. Create a new, empty repository on GitHub
     2. Follow the "Quick setup" steps
-        1. `git init`
-        2. `git add .`
-        3. `git commit -m "build: init repository"`
-        4. `git remote add origin <repository-url>`
-        5. `git push -u origin master`
+      1. `git init`
+      2. `git add .`
+      3. `git commit -m "build: init repository"`
+      4. `git remote add origin <repository-url>`
+      5. `git push -u origin master`
 
 #### Publish package
 
