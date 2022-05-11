@@ -14,10 +14,13 @@
     "react/require-default-props": "off",
     // Have to spread on input elements
     "react/jsx-props-no-spreading": "off",
-    "react/function-component-definition": [2, {
-      "namedComponents": "arrow-function",
-      "unnamedComponents": "arrow-function"
-    }],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
     "@typescript-eslint/semi": "off"
   },
   "env": {
